@@ -8,7 +8,7 @@ if [ -n "${NOTIFY_CONTAINER}" ]; then
     PARAMS="${PARAMS} -notify-sighup ${NOTIFY_CONTAINER}"
 fi
 if [ -n "${NOTIFY_PROCESS}" ]; then
-    PARAMS="${PARAMS} -notify 'pkill -HUP ${NOTIFY_PROCESS}'"
+    PARAMS="${PARAMS} -notify /notify.sh"
 fi
 
 exec /usr/local/bin/docker-gen ${PARAMS} -watch /etc/docker-gen/templates/${TEMPLATE}.tmpl ${TARGET}
