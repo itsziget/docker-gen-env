@@ -5,4 +5,4 @@ RUN chmod +x /start.sh /notify.sh
 
 ENTRYPOINT []
 
-CMD ["/bin/sh", "-c", "/start.sh"]
+CMD ["/start.sh"]
